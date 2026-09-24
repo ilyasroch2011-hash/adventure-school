@@ -3,18 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-<title>Adventure School - Édition Complète</title>
+<title>Adventure School</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<!-- Feuille de style CSS externe -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== APP CONTAINER ===== -->
-<div class="app" id="app" style="max-width:520px; margin:0 auto; min-height:100vh; position:relative; padding-bottom:12px; display:flex; flex-direction:column;">
+<div class="app" id="app">
 
-<!-- ===== HUD ===== -->
 <div class="hud hidden" id="hud">
   <div class="hud-pill"><span class="ico">🏫</span><span id="hudSchoolLevel">?</span></div>
   <div class="hud-pill"><span class="ico">⭐</span><span id="hudLevel">1</span></div>
@@ -26,9 +23,6 @@
   <div class="hud-xpbar"><div class="hud-xpbar-fill" id="hudXpBarFill" style="width:0%;"></div></div>
 </div>
 
-<!-- ===== SCREENS ===== -->
-
-<!-- PARENT ONBOARDING - Étape 1 : Bienvenue -->
 <div class="screen hidden" id="screen-parent-welcome">
   <div class="parent-onboarding">
     <div class="logo-badge">✦ ADVENTURE SCHOOL ✦</div>
@@ -54,51 +48,48 @@
   </div>
 </div>
 
-<!-- PARENT ONBOARDING - Étape 2 : Création du code -->
 <div class="screen hidden" id="screen-parent-create-pin">
   <div class="parent-onboarding">
     <div class="logo-badge">✦ ADVENTURE SCHOOL ✦</div>
     <h1>Créez votre code parent</h1>
-    <p class="desc" style="font-weight:600; font-size:14px;">Code à 4 chiffres pour l'espace parents</p>
+    <p class="desc">Code à 4 chiffres pour l'espace parents</p>
     <div class="pin-container" id="pinCreateContainer">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="0">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="1">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="2">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="3">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
     </div>
     <div class="pin-error-msg" id="pinCreateError"></div>
     <button class="btn btn-primary btn-lg" id="btnParentCreatePin" disabled>Continuer →</button>
   </div>
 </div>
 
-<!-- PARENT ONBOARDING - Étape 3 : Confirmation -->
 <div class="screen hidden" id="screen-parent-confirm-pin">
   <div class="parent-onboarding">
     <div class="logo-badge">✦ ADVENTURE SCHOOL ✦</div>
     <h1>Confirmez votre code</h1>
-    <p class="desc" style="font-weight:600; font-size:14px;">Entrez à nouveau votre code</p>
+    <p class="desc">Entrez à nouveau votre code</p>
     <div class="pin-container" id="pinConfirmContainer">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="0">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="1">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="2">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="3">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
     </div>
     <div class="pin-error-msg" id="pinConfirmError"></div>
     <button class="btn btn-primary btn-lg" id="btnParentConfirmPin" disabled>Commencer 🚀</button>
   </div>
 </div>
 
-<!-- PARENT GATE -->
 <div class="screen hidden" id="screen-parent-gate">
   <div class="parent-onboarding" style="padding-top:20px;">
     <div class="big-icon">🔐</div>
     <h1>Espace parents</h1>
-    <p class="desc" style="font-weight:600; font-size:14px;">Entrez votre code à 4 chiffres</p>
+    <p class="desc">Entrez votre code à 4 chiffres</p>
     <div class="pin-container" id="pinGateContainer">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="0">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="1">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="2">
-      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="3">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+      <input type="password" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
     </div>
     <div class="pin-error-msg" id="pinGateError"></div>
     <button class="btn btn-primary btn-lg" id="btnParentGateUnlock" disabled>Accéder 🔑</button>
@@ -106,7 +97,6 @@
   </div>
 </div>
 
-<!-- HOME -->
 <div class="screen home-screen" id="screen-home">
   <div class="logo-wrap">
     <div class="logo-badge">✦ ROYAUME DU SAVOIR ✦</div>
@@ -123,90 +113,84 @@
   </div>
 </div>
 
-<!-- CREATOR -->
 <div class="screen hidden" id="screen-creator">
   <div class="map-title"><h2>Crée ton héros</h2><p>Personnalise ton aventurier</p></div>
-  <div class="creator-card" style="background:var(--card); border-radius:var(--radius-lg); padding:18px; box-shadow:var(--shadow-soft); display:flex; flex-direction:column; gap:14px;">
+  <div class="creator-card">
     <div>
-      <div class="field-label" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--plum-dark); margin-bottom:6px;">Ton prénom</div>
-      <input type="text" maxlength="14" class="name-input" id="inputName" placeholder="Ex : Léo, Mia..." style="width:100%; padding:12px 14px; font-size:17px; font-family:var(--font-body); font-weight:700; border-radius:var(--radius-md); border:3px solid #E4E9F2; background:#FBFCFE; color:var(--ink);">
+      <div class="field-label">Ton prénom</div>
+      <input type="text" maxlength="14" class="name-input" id="inputName" placeholder="Ex : Léo, Mia...">
     </div>
     <div>
-      <div class="field-label" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--plum-dark); margin-bottom:6px;">Ta classe</div>
-      <select class="school-select" id="schoolLevelSelect" style="width:100%; padding:12px 14px; font-size:17px; font-family:var(--font-body); font-weight:700; border-radius:var(--radius-md); border:3px solid #E4E9F2; background:#FBFCFE; color:var(--ink); appearance:auto; cursor:pointer;">
+      <div class="field-label">Ta classe</div>
+      <select class="school-select" id="schoolLevelSelect">
         <option value="">-- Choisis --</option>
       </select>
     </div>
     <div>
-      <div class="field-label" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--plum-dark); margin-bottom:6px;">Type de personnage</div>
-      <div class="option-row" id="genderRow" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+      <div class="field-label">Type de personnage</div>
+      <div class="option-row" id="genderRow"></div>
     </div>
     <div>
-      <div class="field-label" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--plum-dark); margin-bottom:6px;">Apparence</div>
-      <div class="avatar-grid" id="avatarGrid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px;"></div>
+      <div class="field-label">Apparence</div>
+      <div class="avatar-grid" id="avatarGrid"></div>
     </div>
     <div>
-      <div class="field-label" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--plum-dark); margin-bottom:6px;">Couleur</div>
-      <div class="color-grid" id="colorGrid" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+      <div class="field-label">Couleur</div>
+      <div class="color-grid" id="colorGrid"></div>
     </div>
     <button class="btn btn-primary btn-lg btn-block" id="btnCreateConfirm">C'est parti ! 🚀</button>
   </div>
 </div>
 
-<!-- MAP -->
 <div class="screen hidden" id="screen-map">
   <div class="map-title"><h2 id="mapGreeting">Le Royaume du Savoir</h2><p>Choisis une zone à explorer</p></div>
   <div class="zone-grid" id="zoneGrid"></div>
 </div>
 
-<!-- SUBJECT INTRO -->
 <div class="screen hidden" id="screen-subject-intro">
-  <div class="subject-hero" style="background:var(--card); border-radius:var(--radius-lg); padding:20px 16px; text-align:center; box-shadow:var(--shadow-soft); display:flex; flex-direction:column; align-items:center; gap:8px;">
-    <div class="big-icon" id="subjectIcon" style="font-size:48px;">🏰</div>
+  <div class="subject-hero">
+    <div class="big-icon" id="subjectIcon">🏰</div>
     <h2 id="subjectName">Château des Maths</h2>
-    <p id="subjectDesc" style="font-weight:700; color:var(--ink); opacity:.75; line-height:1.5;">Résous des défis numériques pour gagner de l'XP !</p>
+    <p id="subjectDesc">Résous des défis numériques pour gagner de l'XP !</p>
     <button class="btn btn-primary btn-lg" id="btnStartQuiz">Commencer le défi</button>
   </div>
 </div>
 
-<!-- QUIZ -->
 <div class="screen hidden" id="screen-quiz">
   <div class="quiz-container">
     <div class="quiz-progress-row">
       <span id="quizProgressLabel">Question 1/8</span>
       <span id="quizStreakLabel">🔥 x0</span>
     </div>
-    <div class="riko-companion" id="rikoCompanion">
+    <div class="riko-companion">
       <div class="riko-avatar idle" id="rikoAvatar">🦊</div>
-      <div class="riko-speech"><span class="msg" id="rikoSpeech">Prêt pour un défi ? 💪</span></div>
+      <div class="riko-speech"><span id="rikoSpeech">Prêt pour un défi ? 💪</span></div>
     </div>
     <div class="quiz-card">
       <div class="quiz-question" id="quizQuestion">...</div>
       <div class="quiz-choices" id="quizChoices"></div>
-      <div class="quiz-feedback" id="quizFeedback" style="margin-top:12px; padding:10px 12px; border-radius:var(--radius-md); font-weight:600; font-size:13px; text-align:left; display:none; line-height:1.5;"></div>
-      <div class="quiz-explanation" id="quizExplanation" style="margin-top:10px; padding:12px 14px; border-radius:var(--radius-md); background:#F0F4FF; border-left:4px solid var(--plum); display:none; text-align:left; font-size:14px; line-height:1.6; font-weight:500;"></div>
-      <div class="quiz-actions" id="quizActions" style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+      <div class="quiz-feedback" id="quizFeedback"></div>
+      <div class="quiz-explanation" id="quizExplanation"></div>
+      <div class="quiz-actions" id="quizActions">
         <button class="btn btn-secondary btn-sm hidden" id="btnQuizExplain">💡 Expliquer</button>
         <button class="btn btn-grass btn-sm hidden" id="btnQuizRetry">🔄 Réessayer</button>
       </div>
-      <div class="quiz-next-wrap hidden" id="quizNextWrap" style="margin-top:8px;">
+      <div class="quiz-next-wrap hidden" id="quizNextWrap">
         <button class="btn btn-grass btn-block" id="btnQuizNext">Continuer</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- REWARD -->
 <div class="screen hidden reward-screen" id="screen-reward">
   <div class="reward-burst" id="rewardBurstIcon">🏆</div>
   <h2 id="rewardTitle">Bravo !</h2>
-  <p id="rewardSubtitle" style="font-weight:700; opacity:.75;">Tu as terminé ce défi</p>
+  <p id="rewardSubtitle">Tu as terminé ce défi</p>
   <div class="reward-stats-row" id="rewardStatsRow"></div>
   <div id="rewardBadgeArea"></div>
   <button class="btn btn-primary btn-lg" id="btnRewardContinue">Retour à la carte 🗺️</button>
 </div>
 
-<!-- SHOP -->
 <div class="screen hidden" id="screen-shop">
   <div class="map-title"><h2>Ma Maison</h2><p>Personnalise ton univers</p></div>
   <div class="tab-row">
@@ -217,41 +201,35 @@
   <div id="shopView" class="hidden"></div>
 </div>
 
-<!-- BADGES -->
 <div class="screen hidden" id="screen-badges">
   <div class="map-title"><h2>Mes Badges</h2><p>Collectionne-les tous !</p></div>
   <div class="badges-grid" id="badgesGrid"></div>
 </div>
 
-<!-- PARENT DASHBOARD -->
 <div class="screen hidden" id="screen-parent-dashboard">
   <div class="map-title"><h2>Tableau de bord</h2><p>Suivi de la progression</p></div>
   <div id="parentDashboardContent"></div>
   <button class="btn btn-ghost btn-block" id="btnParentExit" style="margin-top:12px;">← Retour à l'accueil</button>
 </div>
 
-<!-- DAILY CHALLENGES -->
 <div class="screen hidden" id="screen-daily">
   <div class="map-title"><h2>📅 Défis du jour</h2><p>Complète-les pour gagner des bonus !</p></div>
   <div id="dailyContent"></div>
   <button class="btn btn-ghost btn-block" id="btnDailyBack" style="margin-top:12px;">← Retour</button>
 </div>
 
-<!-- REVISION -->
 <div class="screen hidden" id="screen-revision">
   <div class="map-title"><h2>📚 Zone de révision</h2><p>Revois les questions que tu as ratées</p></div>
   <div id="revisionList"></div>
   <button class="btn btn-ghost btn-block" id="btnRevisionBack" style="margin-top:12px;">← Retour</button>
 </div>
 
-<!-- TREASURE HUNT -->
 <div class="screen hidden" id="screen-treasure">
   <div class="map-title"><h2>🏴‍☠️ Chasse au trésor de Riko</h2><p>Trouve les 4 trésors en répondant aux questions !</p></div>
   <div id="treasureContent"></div>
   <button class="btn btn-ghost btn-block" id="btnTreasureBack" style="margin-top:12px;">← Retour</button>
 </div>
 
-<!-- ===== CONTROLE MUSIQUE ===== -->
 <div class="music-control" id="musicControl">
   <button class="music-btn" id="musicToggleBtn">
     <span class="icon-on">🔊</span>
@@ -261,12 +239,10 @@
   <span class="music-label">♪</span>
 </div>
 
-</div><!-- /app -->
+</div>
 
-<!-- ===== TOAST ===== -->
 <div class="toast" id="toast"></div>
 
-<!-- Script JavaScript externe -->
 <script src="script.js"></script>
 </body>
 </html>
